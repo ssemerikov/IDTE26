@@ -1,0 +1,56 @@
+[    1895ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[    1905ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8765/favicon.ico:0
+[   94425ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[   95778ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[   95783ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[   95789ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[   95791ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[   96040ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  250559ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  251580ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  251585ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  251587ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  251589ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  251688ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  439730ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  440733ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  440739ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  440743ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  440745ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  440828ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  498542ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  499571ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  499575ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  499577ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  499578ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  499649ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  562323ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  563309ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  563313ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  563314ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  563316ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[  563391ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1205860ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1206998ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1206999ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1207000ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1207000ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1207034ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1287990ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1288759ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1288761ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1288762ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1288763ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1288795ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1648350ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1649121ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1649123ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1649124ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1649124ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1649157ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1660401ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1661147ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1661149ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1661151ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1661151ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0
+[ 1661182ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:8765/AR.js-master/aframe/build/aframe-ar.js:0

@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../aframe/aframe.min.js"></script>
+    <script src="../AR.js-master/aframe/build/aframe-ar.js"></script>
+    <style>
+      .a-enter-vr, .a-enter-ar { display: none !important; }
+
+      /* AR.js сам керує розмірами body/video (нативний аспект камери)
+         та центрує їх від'ємними margin.
+         Ми лише прибираємо scrollbars через overflow:hidden —
+         не чіпаємо розміри, щоб не ламати проекційну матрицю. */
+      html, body {
+        overflow: hidden;
+        padding: 0;
+      }
+
+      body {
+        margin: 0; /* без !important — AR.js inline margin-top виграє */
+      }
+    </style>
+  </head>
+  <body>
+	<!--<a-scene embedded arjs="sourceType: image; sourceUrl:../assets/Photo-1.jpeg; debug: true; ">-->
+	<!--<a-scene embedded arjs="sourceType: video; sourceUrl:../assets/video.mp4; debug: true; ">-->
+	<a-scene embedded arjs="debug: false; "  vr-mode-ui="enabled: false">
+		<a-assets>
+			<img id="sky" src="../assets/bluesky.png">
+			<img id="carav" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/illustration/758px-Canestra_di_frutta_(Caravaggio).jpg">
+			<a-asset-item id="model" src="../assets/flask.glb"></a-asset-item>
+		</a-assets>
+		<!--<a-sky src="#sky"></a-sky>-->
+		<a-box color="green" position="0.75 0 -10"></a-box>
+
+		<a-marker preset="hiro">
+		
+		<a-entity scale="0.2 0.2 0.2" rotation="-90 0 0"> <!-- position="0.75 0 -1.2"-->
+		
+			<a-torus position="-2 1 -5" color="green" radius="1.2"
+				animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" 
+			></a-torus>
+			<a-box src="#sky" position="2 0 -5" depth="1" height="1" width="1"></a-box>
+			<a-plane width="7" height="7" rotation="50 0 0" position="-2 -2 -5" color="purple" side="double"
+				animation="property: rotation; to: 360 0 0; dur: 10000; easing: linear; loop: true" 
+				src="#carav"
+			></a-plane>
+			<a-cylinder color="yellow" height="2" radius="0.05" position="-2 -1 -5"></a-cylinder>
+			<a-cylinder color="blue"   height="2" radius="0.05" position="-3 -1 -5"></a-cylinder>
+			<a-torus-knot color="orange" radius="1.2" radius-tubular="0.2" position="-3 1 -5" 
+				animation="property: components.material.material.color;
+	type: color; from: green; to: red; loop: true; dur: 10000">
+			</a-torus-knot>
+			<a-plane width="9" height="2" position="3 1 -9"></a-plane>
+			<a-text value="Надпис українською VR!" 
+				font="../assets/times-msdf.json" negate="false"
+				color="black" width="10" position="-0.5 1 -6"></a-text>
+			<a-text value="Надпис українською VR!" 
+				side="double"
+				font="../assets/custom-msdf.json" negate="false"
+				animation="property: position; to: -0.5 1.4 +6; dur: 6000; easing: linear; loop: true" 
+				color="black" width="10" position="-0.5 1.4 -6"></a-text>        
+				
+			<a-gltf-model src="#model" position="3 0 -3" scale="0.2 0.2 0.2"></a-gltf-model>
+
+		</a-entity>
+
+		</a-marker>
+      
+		<a-entity camera></a-entity>
+	</a-scene>
+  </body>
+</html>
