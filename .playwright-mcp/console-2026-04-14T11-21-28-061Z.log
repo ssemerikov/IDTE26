@@ -1,0 +1,5 @@
+[    1374ms] [LOG] A-Frame Version: 1.6.0 (Date 2024-05-23, Commit #0e2163bd) @ https://aframe.io/releases/1.6.0/aframe.min.js:0
+[    1374ms] [LOG] THREE Version (https://github.com/supermedium/three.js): 164 @ https://aframe.io/releases/1.6.0/aframe.min.js:0
+[    1374ms] [LOG] WebVR Polyfill Version: ^0.10.12 @ https://aframe.io/releases/1.6.0/aframe.min.js:0
+[    1580ms] [WARNING] THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733. @ https://aframe.io/releases/1.6.0/aframe.min.js:0
+[    2571ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8181/favicon.ico:0
