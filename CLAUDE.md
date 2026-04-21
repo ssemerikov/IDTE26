@@ -35,7 +35,7 @@ Each `weekN/` folder is a standalone assignment that builds on the previous:
 | `week2/` | Added animations, external image, `.glb` model, Ukrainian MSDF text |
 | `week3/` | First AR scene — AR.js + Hiro marker, webcam required |
 | `week4/` | Refined AR with multiple markers (`hiro`, `kanji`, custom `.patt` files), CSS fixes for AR.js layout |
-| `week5/` | Three demos: MindAR image-target AR (`arindex.html`), VR solar system simulation (`vrindex.html`), combined MindAR scene (`test_mindar2.html`) |
+| `week5/` | Three demos: MindAR + solar system AR (`arindex.html`), VR solar system simulation (`vrindex.html`), combined MindAR scene (`test_mindar2.html`) |
 
 ## Key Architecture Notes
 
@@ -54,12 +54,13 @@ Each `weekN/` folder is a standalone assignment that builds on the previous:
 - Custom font files: `assets/times-msdf.json` and `assets/custom-msdf.json`
 - Usage: `<a-text font="../assets/times-msdf.json" negate="false" value="...">`
 
-### Solar system simulation (`week5/planet.js`)
+### Solar system simulation (`week5/planet.js`, `week5/planet_ar.js`)
 - Two custom A-Frame components: `planet` (schema + init for orbital mechanics) and `main` (tick loop running N-body gravity simulation)
 - Positions stored in meters, displayed scaled to millions of km (divide by `1e9`)
 - Integration step: `day/3` seconds per frame tick
 - `console.log` calls left in the tick loop — remove for performance if adding more planets
+- `planet.js` (used by `vrindex.html`) and `planet_ar.js` (used by `arindex.html`) are identical files — one for the pure VR scene, one embedded in the MindAR AR scene
 
 ### AR.js local vs CDN
-- Weeks 3 uses CDN AR.js (`raw.githack.com`); weeks 4–5 use the local `AR.js-master/` copy
-- A-Frame is always loaded from the local `aframe/` copy
+- Week 3 uses CDN AR.js (`raw.githack.com`); weeks 4–5 use the local `AR.js-master/` copy
+- A-Frame is loaded from the local `aframe/` copy **except** `week5/arindex.html`, which loads A-Frame from CDN (`https://aframe.io/releases/1.6.0/aframe.min.js`)
