@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Triangle on Three Markers</title>
+    <!-- Use local copies of A-Frame and AR.js -->
+    <script src="../aframe/aframe.min.js"></script>
+    <script src="../AR.js-master/aframe/build/aframe-ar.js"></script>
+    <script src="mycode.js"></script>
+</head>
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded vr-mode-ui="enabled: false;"
+             arjs="debugUIEnabled: false; detectionMode: mono_and_matrix;">
+        
+        <!-- Marker A -->
+        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.a" id="A" registerevents>
+            <a-sphere radius="0.10" color="red"></a-sphere>
+            <a-entity id="lineAB"></a-entity>
+        </a-marker>
+        
+        <!-- Marker B -->
+        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.b" id="B" registerevents>
+            <a-sphere radius="0.10" color="red"></a-sphere>
+            <a-entity id="lineBC"></a-entity>
+        </a-marker>
+        
+        <!-- Marker C -->
+        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.c" id="C" registerevents>
+            <a-sphere radius="0.10" color="red"></a-sphere>
+            <a-entity id="lineAC"></a-entity>
+        </a-marker>
+        
+        <a-entity camera></a-entity>
+        <a-entity run></a-entity>
+    </a-scene>
+</body>
+</html>
