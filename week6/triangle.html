@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Triangle on Three Markers</title>
-    <!-- Use local copies of A-Frame and AR.js -->
+    <title>Geometric Solver - IDTE26 Week 6</title>
     <script src="../aframe/aframe.min.js"></script>
     <script src="../AR.js-master/aframe/build/aframe-ar.js"></script>
     <script src="mycode.js"></script>
@@ -13,25 +12,34 @@
              arjs="debugUIEnabled: false; detectionMode: mono_and_matrix;">
         
         <!-- Marker A -->
-        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.a" id="A" registerevents>
-            <a-sphere radius="0.10" color="red"></a-sphere>
-            <a-entity id="lineAB"></a-entity>
+        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.a" id="A" marker-node>
+            <a-sphere radius="0.05" color="red"></a-sphere>
+            <a-text value="A" align="center" position="0 0.1 0" scale="0.5 0.5 0.5"></a-text>
         </a-marker>
         
         <!-- Marker B -->
-        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.b" id="B" registerevents>
-            <a-sphere radius="0.10" color="red"></a-sphere>
-            <a-entity id="lineBC"></a-entity>
+        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.b" id="B" marker-node>
+            <a-sphere radius="0.05" color="green"></a-sphere>
+            <a-text value="B" align="center" position="0 0.1 0" scale="0.5 0.5 0.5"></a-text>
         </a-marker>
         
         <!-- Marker C -->
-        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.c" id="C" registerevents>
-            <a-sphere radius="0.10" color="red"></a-sphere>
-            <a-entity id="lineAC"></a-entity>
+        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.c" id="C" marker-node>
+            <a-sphere radius="0.05" color="blue"></a-sphere>
+            <a-text value="C" align="center" position="0 0.1 0" scale="0.5 0.5 0.5"></a-text>
+        </a-marker>
+
+        <!-- Marker D -->
+        <a-marker type="pattern" url="../AR.js-master/data/multimarkers/multi-abcdef/patt.d" id="D" marker-node>
+            <a-sphere radius="0.05" color="yellow"></a-sphere>
+            <a-text value="D" align="center" position="0 0.1 0" scale="0.5 0.5 0.5"></a-text>
         </a-marker>
         
         <a-entity camera></a-entity>
-        <a-entity run></a-entity>
+        
+        <!-- The Solver Component -->
+        <a-entity polygon-solver></a-entity>
+        
     </a-scene>
 </body>
 </html>
