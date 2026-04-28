@@ -51,8 +51,16 @@ AFRAME.registerComponent('polygon-solver', {
             cyl.setAttribute('color', 'red');
             cyl.setAttribute('material', 'shader: flat');
             
-            // Offset and rotate so it spans from 0 to 1 along Z axis
-            cyl.object3D.position.set(0, 0, 0.5);
+            // Offset the geometry so the base is at (0,0,0) instead of the center
+            // This allows scaling from one end
+            cyl.addEventListener('loaded', (e) => {
+                let mesh = e.target.getObject3D('mesh');
+                if (mesh) {
+                    mesh.geometry.translate(0, 0.5, 0);
+                }
+            });
+
+            // Rotate so it points along the Z-axis of the wrapper
             cyl.object3D.rotation.x = Math.PI / 2;
             
             line.appendChild(cyl);
@@ -137,7 +145,9 @@ AFRAME.registerComponent('polygon-solver', {
         let dist = this.p1.distanceTo(this.p2);
         poolObj.wrapper.object3D.position.copy(this.p1);
         poolObj.wrapper.object3D.lookAt(this.p2);
-        poolObj.mesh.object3D.scale.set(1, 1, dist);
+        
+        // Scale the Y-axis (height of the cylinder)
+        poolObj.mesh.object3D.scale.set(1, dist, 1);
         poolObj.wrapper.setAttribute('visible', 'true');
     },
 
