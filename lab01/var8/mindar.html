@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>lab01 var8 — MindAR (Collider)</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <style>body{margin:0;overflow:hidden}</style>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: targets.mind;" embedded color-space="sRGB" vr-mode-ui="enabled: false">
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-torus radius="0.8" radius-tubular="0.15" material="opacity:0.2;transparent:true"></a-torus>
+        <a-entity>
+          <a-entity rotation="0 0 0">
+            <a-sphere position="0.7 0 0" radius="0.05" color="#ff0000"></a-sphere>
+            <a-animation attribute="rotation" dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+          </a-entity>
+          <a-entity rotation="0 180 0">
+            <a-sphere position="0.7 0 0" radius="0.05" color="#00ff00"></a-sphere>
+            <a-animation attribute="rotation" dur="4000" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

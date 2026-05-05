@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>lab01 var5 — MindAR (Lithium atom)</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <style>body{margin:0;overflow:hidden}</style>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: targets.mind;" embedded color-space="sRGB" vr-mode-ui="enabled: false">
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-entity id="atom" position="0 0 0">
+          <a-sphere radius="0.06" color="#ffcc00"></a-sphere>
+          <a-entity rotation="0 0 0">
+            <a-sphere position="0.25 0 0" radius="0.008" color="#00aaff"></a-sphere>
+            <a-animation attribute="rotation" dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

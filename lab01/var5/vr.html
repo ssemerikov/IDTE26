@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lab01 Var5 — VR (Lithium atom)</title>
+    <script src="../../aframe/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity id="atom" position="0 1.5 -3">
+        <!-- Nucleus -->
+        <a-sphere radius="0.15" color="#ffcc00" segments-height="18"></a-sphere>
+        <!-- Electrons: three electrons on different orbits -->
+        <a-entity id="orbit1" rotation="0 0 0">
+          <a-sphere position="0.6 0 0" radius="0.02" color="#00aaff"></a-sphere>
+          <a-animation attribute="rotation" dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+        </a-entity>
+        <a-entity id="orbit2" rotation="30 0 0">
+          <a-sphere position="1 0 0" radius="0.02" color="#00ffaa"></a-sphere>
+          <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+        </a-entity>
+        <a-entity id="orbit3" rotation="60 0 0">
+          <a-sphere position="1.6 0 0" radius="0.02" color="#ff00aa"></a-sphere>
+          <a-animation attribute="rotation" dur="18000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+        </a-entity>
+      </a-entity>
+
+      <a-entity light="type: point; intensity: 1.2; distance: 30" position="0 10 -10"></a-entity>
+      <a-sky color="#111"></a-sky>
+      <a-camera position="0 1.6 0"></a-camera>
+    </a-scene>
+  </body>
+</html>
