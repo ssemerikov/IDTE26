@@ -31,6 +31,7 @@ Key conventions (do not assume generic defaults)
 Files and docs to read first
 - `CLAUDE.md` and `GEMINI.md` — canonical notes about architecture and conventions.
 - `index.html` — portal to demos.
+- `lab01/index.html` — lab 1 entry with per-variant indexes (var5, var8).
 - `week5/planet.js` — example of custom components and simulation conventions.
 - `.claude/` — local assistant settings.
 
