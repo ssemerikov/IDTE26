@@ -1,0 +1,18 @@
+[     120ms] [LOG] A-Frame Version: 1.7.1 (Date 2025-04-01, Commit #ceac308b) @ http://localhost:5500/aframe/aframe.min.js:0
+[     121ms] [LOG] THREE Version (https://github.com/supermedium/three.js): 173 @ http://localhost:5500/aframe/aframe.min.js:0
+[     263ms] [LOG] AR.js 3.4.8 - trackingBackend: artoolkit @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[     276ms] [LOG] ARjs.Anchor - changeMatrixMode: modelViewMatrix / markersAreaEnabled: false @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[     277ms] [WARNING] ArMarkerControls: 'markersAreaEnabled' is not a property of this material. @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[     930ms] [INFO] ARToolkit  0.3.2 @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[     998ms] [LOG] [ARController] ARToolkit initialized @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1289ms] [LOG] [ARController] Camera params loaded with ID 0 @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1369ms] [WARNING] [info] Allocated videoFrameSize 1228800 @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1369ms] [LOG] [ARController] Got ID from setup 0 @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1370ms] [WARNING] [info] Pattern detection mode set to 1. @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1371ms] [WARNING] [info] Pattern ratio size set to 0.500000. @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1372ms] [WARNING] [info] Labeling mode set to 1 @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1373ms] [LOG] actual source dimensions 1172 879 @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1373ms] [LOG] source orientation landscape @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1373ms] [LOG] actual source dimensions 1172 879 @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1373ms] [LOG] source orientation landscape @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0
+[    1445ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ http://localhost:5500/AR.js-master/aframe/build/aframe-ar.js:0

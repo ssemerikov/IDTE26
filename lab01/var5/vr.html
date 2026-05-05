@@ -2,31 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lab01 Var5 — VR (Lithium atom)</title>
     <script src="../../aframe/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true">
       <a-entity id="atom" position="0 1.5 -3">
-        <!-- Nucleus -->
-        <a-sphere radius="0.15" color="#ffcc00" segments-height="18"></a-sphere>
-        <!-- Electrons: three electrons on different orbits -->
-        <a-entity id="orbit1" rotation="0 0 0">
-          <a-sphere position="0.6 0 0" radius="0.02" color="#00aaff"></a-sphere>
-          <a-animation attribute="rotation" dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+        <a-sphere radius="0.15" color="#ffcc00" segments-height="18" material="emissive:#ffcc00;emissiveIntensity:0.4"></a-sphere>
+
+        <a-torus radius="0.6" radius-tubular="0.005" rotation="0 0 0" material="color:#00aaff;opacity:0.3;transparent:true;emissive:#00aaff;emissiveIntensity:0.2"></a-torus>
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+          <a-sphere position="0.6 0 0" radius="0.04" color="#00aaff" material="emissive:#00aaff;emissiveIntensity:0.5"></a-sphere>
         </a-entity>
-        <a-entity id="orbit2" rotation="30 0 0">
-          <a-sphere position="1 0 0" radius="0.02" color="#00ffaa"></a-sphere>
-          <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+
+        <a-torus radius="1" radius-tubular="0.005" rotation="30 0 0" material="color:#00ffaa;opacity:0.3;transparent:true;emissive:#00ffaa;emissiveIntensity:0.2"></a-torus>
+        <a-entity rotation="30 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear">
+          <a-sphere position="1 0 0" radius="0.04" color="#00ffaa" material="emissive:#00ffaa;emissiveIntensity:0.5"></a-sphere>
         </a-entity>
-        <a-entity id="orbit3" rotation="60 0 0">
-          <a-sphere position="1.6 0 0" radius="0.02" color="#ff00aa"></a-sphere>
-          <a-animation attribute="rotation" dur="18000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+
+        <a-torus radius="1.6" radius-tubular="0.005" rotation="60 0 0" material="color:#ff00aa;opacity:0.3;transparent:true;emissive:#ff00aa;emissiveIntensity:0.2"></a-torus>
+        <a-entity rotation="60 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 18000; easing: linear">
+          <a-sphere position="1.6 0 0" radius="0.04" color="#ff00aa" material="emissive:#ff00aa;emissiveIntensity:0.5"></a-sphere>
         </a-entity>
       </a-entity>
 
-      <a-entity light="type: point; intensity: 1.2; distance: 30" position="0 10 -10"></a-entity>
-      <a-sky color="#111"></a-sky>
+      <a-entity light="type: ambient; intensity: 0.6"></a-entity>
+      <a-entity light="type: point; intensity: 1; distance: 50" position="2 4 4"></a-entity>
+      <a-sky color="#050510"></a-sky>
       <a-camera position="0 1.6 0"></a-camera>
     </a-scene>
   </body>

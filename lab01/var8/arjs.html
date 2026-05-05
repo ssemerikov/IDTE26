@@ -2,28 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>lab01 var8 — AR.js (Collider)</title>
     <script src="../../aframe/aframe.min.js"></script>
     <script src="../../AR.js-master/aframe/build/aframe-ar.js"></script>
     <style>html,body{overflow:hidden;margin:0;padding:0;height:100%;}</style>
   </head>
   <body>
-    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;' vr-mode-ui="enabled: false" renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true">
       <a-marker type="pattern" url="pattern-ATLAS-logo.patt">
-        <a-torus radius="0.8" radius-tubular="0.15" position="0 0 0" material="opacity:0.2;transparent:true"></a-torus>
-        <a-entity position="0 0 0">
-          <a-entity rotation="0 0 0">
-            <a-sphere position="0.7 0 0" radius="0.05" color="#ff0000">
-              <a-animation attribute="rotation" dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-            </a-sphere>
+        <a-torus radius="0.8" radius-tubular="0.03" rotation="90 0 0" material="opacity:0.5;transparent:true;color:#888;emissive:#444"></a-torus>
+        <a-entity position="0 0.2 0">
+          <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+            <a-sphere position="0.8 0 0" radius="0.06" color="#ff0000" material="emissive:#ff0000;emissiveIntensity:0.8"></a-sphere>
           </a-entity>
-          <a-entity rotation="0 180 0">
-            <a-sphere position="0.7 0 0" radius="0.05" color="#00ff00">
-              <a-animation attribute="rotation" dur="4000" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation>
-            </a-sphere>
+          <a-entity animation="property: rotation; to: 0 -360 0; loop: true; dur: 4000; easing: linear">
+            <a-sphere position="0.8 0 0" radius="0.06" color="#00ff00" material="emissive:#00ff00;emissiveIntensity:0.8"></a-sphere>
           </a-entity>
         </a-entity>
       </a-marker>
+
+      <a-entity light="type: ambient; intensity: 0.8"></a-entity>
+      <a-entity light="type: directional; intensity: 0.6" position="1 2 1"></a-entity>
       <a-entity camera></a-entity>
     </a-scene>
   </body>

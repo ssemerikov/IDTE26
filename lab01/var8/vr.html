@@ -2,28 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lab01 Var8 — VR (Collider)</title>
     <script src="../../aframe/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <!-- Transparent torus representing the collider -->
-      <a-torus position="0 1.5 -3" radius="1.2" radius-tubular="0.2" color="#888" material="opacity:0.2;transparent:true"></a-torus>
+    <a-scene renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true">
+      <a-torus position="0 1.5 -3" rotation="90 0 0" radius="1.2" radius-tubular="0.05" color="#555" material="opacity:0.4;transparent:true;emissive:#333"></a-torus>
 
-      <!-- Two protons moving inside the torus (simulate by rotating parent groups) -->
       <a-entity position="0 1.5 -3">
-        <a-entity id="group1" rotation="0 0 0">
-          <a-sphere position="1 0 0" radius="0.05" color="#ff0000"></a-sphere>
-          <a-animation attribute="rotation" dur="4000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+          <a-sphere position="1.2 0 0" radius="0.08" color="#ff0000" material="emissive:#ff0000;emissiveIntensity:0.8"></a-sphere>
         </a-entity>
-        <a-entity id="group2" rotation="0 180 0">
-          <a-sphere position="1 0 0" radius="0.05" color="#00ff00"></a-sphere>
-          <a-animation attribute="rotation" dur="4000" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation>
+        <a-entity animation="property: rotation; to: 0 -360 0; loop: true; dur: 4000; easing: linear">
+          <a-sphere position="1.2 0 0" radius="0.08" color="#00ff00" material="emissive:#00ff00;emissiveIntensity:0.8"></a-sphere>
         </a-entity>
       </a-entity>
 
-      <a-entity light="type: point; intensity: 1.2; distance: 30" position="0 5 -2"></a-entity>
-      <a-sky color="#111"></a-sky>
+      <a-entity light="type: ambient; intensity: 0.5"></a-entity>
+      <a-entity light="type: point; intensity: 1.2; distance: 30" position="2 5 2"></a-entity>
+      <a-sky color="#050510"></a-sky>
       <a-camera position="0 1.6 0"></a-camera>
     </a-scene>
   </body>

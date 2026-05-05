@@ -1,0 +1,3 @@
+- generic [ref=e2]:
+  - button "Enter VR mode with a headset or fullscreen without" [ref=e4] [cursor=pointer]
+  - text: Insert phone into Cardboard holder.
