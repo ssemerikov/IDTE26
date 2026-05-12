@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тиждень 12 — AR з відносними координатами</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+    </style>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/locar@0.1.9/dist/locar.umd.js"></script>
+    <script>window.LocAR = window.locar;</script>
+    <script src="https://unpkg.com/locar-aframe@0.1.2/dist/locar-aframe.umd.js"></script>
+</head>
+<body>
+    <a-scene locar-webcam
+             vr-mode-ui="enabled: false"
+             renderer="antialias: true; logarithmicDepthBuffer: true">
+
+        <a-assets>
+            <a-asset-item id="flask-model" src="../assets/flask.glb"></a-asset-item>
+        </a-assets>
+
+        <a-camera position="0 1.6 0"
+                  look-controls="enabled: false"
+                  wasd-controls="enabled: false">
+        </a-camera>
+
+        <!-- Ліворуч: flask.glb -->
+        <a-gltf-model src="#flask-model"
+                      position="-2.5 0 -5"
+                      scale="0.2 0.2 0.2"
+                      rotation="0 45 0"
+                      animation="property: rotation; to: 0 405 0; dur: 8000; easing: linear; loop: true">
+        </a-gltf-model>
+
+        <!-- Праворуч: torus-knot -->
+        <a-torus-knot position="2.5 0 -5"
+                      radius="0.8"
+                      radius-tubular="0.15"
+                      color="tomato"
+                      animation="property: rotation; to: 0 360 0; dur: 6000; easing: linear; loop: true"
+                      animation__color="property: components.material.material.color;
+                                        type: color; from: tomato; to: orange; loop: true;
+                                        dir: alternate; dur: 3000">
+        </a-torus-knot>
+
+        <a-light type="ambient" color="#BBB"></a-light>
+        <a-light type="directional" color="#FFF" position="1 2 -3"></a-light>
+
+    </a-scene>
+</body>
+</html>

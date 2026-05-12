@@ -35,11 +35,12 @@ The config (`playwright.config.js`) starts `npx serve . -p 8080` automatically. 
 - **AR.js** (`AR.js-master/aframe/build/aframe-ar.js`) — local copy, marker-based AR via webcam
 - **MindAR** (`cdn.jsdelivr.net/npm/mind-ar@1.2.5`) — image-target AR (CDN only)
 - **Three.js** — ES modules via import maps (CDN, week6), no bundler
+- **LocAR.js** (`locar/`) — vendor copies of LocAR.js, locar-aframe.js, and locar-tiler for location-based (GPS) AR, used by week12
 - **Assets** (`assets/`) — shared textures, models (`.glb`), MSDF fonts, AR marker patterns (`.patt`), MindAR target files (`.mind`)
 
 ## Structure
 
-### Weeks (`week1/`–`week6/`)
+### Weeks (`week1/`–`week12/`)
 
 Each `weekN/` folder is a standalone assignment building on the previous:
 
@@ -51,6 +52,7 @@ Each `weekN/` folder is a standalone assignment building on the previous:
 | `week4/` | Refined AR with multiple markers (`hiro`, `kanji`, custom `.patt` files), CSS fixes for AR.js layout |
 | `week5/` | MindAR + solar system AR (`arindex.html`), VR solar system simulation (`vrindex.html`), combined MindAR scene (`test_mindar2.html`) |
 | `week6/` | Three.js via import maps (`index.html`), AR geometric solver using custom A-Frame components (`triangle.html` + `mycode.js`) |
+| `week12/` | Location-based AR with LocAR.js — places colored boxes at GPS coordinates around Chichester, UK |
 
 ### Lab01 (`lab01/`)
 
@@ -59,7 +61,7 @@ Lab assignment with two variants, each containing VR, AR.js, and MindAR scenes:
 - **var5** — Lithium atom model (nucleus + 3 electron orbits)
 - **var8** — Collider (torus ring with two orbiting protons)
 
-Each variant folder contains `vr.html`, `arjs.html`, `mindar.html`, plus variant-specific `.patt` and `.mind` target files.
+Each variant folder contains `vr.html`, `arjs.html`, `mindar.html`, an `index.html` portal, plus variant-specific `.patt` and `.mind` target files. The top-level `lab01/index.html` links to both variants.
 
 ## Key Architecture Notes
 
@@ -90,10 +92,21 @@ Each variant folder contains `vr.html`, `arjs.html`, `mindar.html`, plus variant
 - Uses object pools for lines (15) and text labels (10) to avoid per-frame DOM creation
 - Pure Three.js `CylinderGeometry` meshes for lines (not A-Frame entities) — geometry is pre-rotated to align along Z axis in `init`
 
+### LocAR.js location-based AR (week12)
+
+- LocAR.js is the GPS/location-based AR library extracted from AR.js into a standalone project
+- Three libraries, all loaded from CDN in the HTML: `locar` (core, Three.js-based), `locar-aframe` (A-Frame bindings), `locar-tiler` (tiled geodata download)
+- `<a-scene locar-webcam>` enables the webcam background
+- `<a-camera locar-camera='simulateLatitude: ...; simulateLongitude: ...'>` — GPS-aware camera; uses `simulateLatitude`/`simulateLongitude` for desktop testing where real GPS is unavailable
+- `<a-box locar-entity-place='latitude: ...; longitude: ...'>` — places entities at real-world GPS coordinates
+- Vendor copies of all three libraries live in `locar/` for reference (not loaded from there — the HTML uses unpkg CDN)
+- A-Frame 1.7.1 from CDN (newer than the local `aframe/` copy) plus `aframe-look-at-component` for billboarding
+
 ### Three.js import maps (week6)
 - `week6/index.html` uses `<script type="importmap">` with CDN URLs for Three.js 0.184.0
 - `week6/main.js` uses `import * as THREE from 'three'` — no bundler needed
 
 ### Vendor library locations
 - Week 3 uses CDN AR.js (`raw.githack.com`); weeks 4–6 and lab01 use local `AR.js-master/`
-- A-Frame is loaded from local `aframe/` copy **except** MindAR pages (week5 `arindex.html`, lab01 `mindar.html`), which load A-Frame from CDN (`https://aframe.io/releases/1.6.0/aframe.min.js`) because MindAR requires a compatible version
+- A-Frame is loaded from local `aframe/` copy **except** MindAR pages (week5 `arindex.html`, lab01 `mindar.html`) which load A-Frame from CDN (1.6.0), and week12 (LocAR.js) which loads A-Frame 1.7.1 from CDN
+- LocAR.js libraries (`locar`, `locar-aframe`, `locar-tiler`) are loaded from unpkg CDN in week12; their source code is in `locar/` for reference
