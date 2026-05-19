@@ -23,8 +23,10 @@ Open `index.html` at `http://localhost:8080`.
 Playwright E2E tests verify that scene pages load with expected A-Frame/MindAR elements:
 
 ```bash
-npm run test:e2e          # run all Playwright tests
-npx playwright test tests/basic.spec.js   # single test file
+npm install                # install Playwright (first time only)
+npm run test:e2e           # run all Playwright tests
+npx playwright test tests/basic.spec.js    # single test file
+npx playwright test tests/lab01.spec.js    # lab01 variant tests
 ```
 
 The config (`playwright.config.js`) starts `npx serve . -p 8080` automatically. Tests run only in Chromium.
@@ -53,6 +55,7 @@ Each `weekN/` folder is a standalone assignment building on the previous:
 | `week5/` | MindAR + solar system AR (`arindex.html`), VR solar system simulation (`vrindex.html`), combined MindAR scene (`test_mindar2.html`) |
 | `week6/` | Three.js via import maps (`index.html`), AR geometric solver using custom A-Frame components (`triangle.html` + `mycode.js`) |
 | `week12/` | Location-based AR with LocAR.js — places colored boxes at GPS coordinates around Chichester, UK |
+| `week13/` | **In progress** — Human.js emotion/age/gender detection integrated with MindAR face tracking (see `week13/plan.md` for implementation steps) |
 
 ### Lab01 (`lab01/`)
 
@@ -61,7 +64,7 @@ Lab assignment with two variants, each containing VR, AR.js, and MindAR scenes:
 - **var5** — Lithium atom model (nucleus + 3 electron orbits)
 - **var8** — Collider (torus ring with two orbiting protons)
 
-Each variant folder contains `vr.html`, `arjs.html`, `mindar.html`, an `index.html` portal, plus variant-specific `.patt` and `.mind` target files. The top-level `lab01/index.html` links to both variants.
+Each variant folder contains `vr.html`, `arjs.html`, `mindar.html`, an `index.html` portal, plus variant-specific `.patt` and `.mind` target files. The top-level `lab01/index.html` links to both variants. Reference materials: `lab01/l01.pdf` (assignment PDF) and `lab01/task.md` (task description in Ukrainian).
 
 ## Key Architecture Notes
 
@@ -110,3 +113,14 @@ Each variant folder contains `vr.html`, `arjs.html`, `mindar.html`, an `index.ht
 - Week 3 uses CDN AR.js (`raw.githack.com`); weeks 4–6 and lab01 use local `AR.js-master/`
 - A-Frame is loaded from local `aframe/` copy **except** MindAR pages (week5 `arindex.html`, lab01 `mindar.html`) which load A-Frame from CDN (1.6.0), and week12 (LocAR.js) which loads A-Frame 1.7.1 from CDN
 - LocAR.js libraries (`locar`, `locar-aframe`, `locar-tiler`) are loaded from unpkg CDN in week12; their source code is in `locar/` for reference
+
+### Human.js (`human-main/`)
+
+Vendored copy of [Human.js](https://github.com/vladmandic/human) (v1.4+) — a face/body detection library built on TensorFlow.js. Provides emotion, age, and gender estimation from camera frames. Used by week13. Key paths:
+
+- `human-main/dist/human.js` — IIFE bundle for browsers (includes TFJS)
+- `human-main/dist/human.esm.js` — ESM bundle for browsers
+- `human-main/demo/typescript/` — reference examples for emotion/age/gender detection
+- `human-main/models/` — TFJS model files
+
+The CDN load URL is `https://cdn.jsdelivr.net/npm/@vladmandic/human/dist/human.js`.
